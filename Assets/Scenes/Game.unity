@@ -518,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef013fe17e673843a97243e890e11bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _useAI: 1
   _useJoystick: 0
   _joystick: {fileID: 491184288}
   _ship: {fileID: 2130840908}
