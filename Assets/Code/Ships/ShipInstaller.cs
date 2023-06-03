@@ -27,6 +27,7 @@ namespace Ships
                 return new JoystickInputAdapter(_joystick, _joyButton);
             
             Destroy(_joystick.gameObject);
+            Destroy(_joyButton.gameObject);
             return new UnityInputAdapter();
         }
 
