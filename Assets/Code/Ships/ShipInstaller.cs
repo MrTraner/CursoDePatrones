@@ -13,7 +13,7 @@ namespace Ships
 
         private void Awake()
         {
-            _ship.Configure(GetInput());
+            _ship.Configure(GetInput(), GetCheckLimitsStrategy());
         }
 
         private IInput GetInput()
@@ -26,6 +26,14 @@ namespace Ships
             
             Destroy(_joystick.gameObject);
             return new UnityInputAdapter();
+        }
+
+        private ICheckLimits GetCheckLimitsStrategy()
+        {
+            if (_useAI)
+                return new InitialPositionCheckLimits(_ship.transform, 5f);
+
+            return new ViewportCheckLimits(_ship.transform, Camera.main);
         }
     }
 }

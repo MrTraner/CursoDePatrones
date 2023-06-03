@@ -11,17 +11,19 @@ namespace Ships
         private IInput _input;
         //[SerializeField] private bool useJoystick;
         private Transform _myTransform;
-        private Camera _camera;
+        //private Camera _camera;
+        private ICheckLimits _checkLimits;
 
-        public void Configure(IInput input)
+        public void Configure(IInput input, ICheckLimits checkLimits)
         {
             _input = input;
+            _checkLimits = checkLimits;
         }
 
         void Awake()
         {
             _myTransform = transform;
-            _camera = Camera.main;
+            //_camera = Camera.main;
         }
 
         void Update()
@@ -49,11 +51,12 @@ namespace Ships
         private void Move(Vector2 direction)
         {
             _myTransform.Translate(direction * (_speed * Time.deltaTime));
-            
-            ClampFinalPosition();
+
+            //ClampFinalPosition();
+            _checkLimits.ClampFinalPosition();
         }
 
-        private void ClampFinalPosition()
+        /*private void ClampFinalPosition()
         {
             var viewportPoint = _camera.WorldToViewportPoint(_myTransform.position);
 
@@ -64,6 +67,6 @@ namespace Ships
             viewportPoint.y = Mathf.Clamp(viewportPoint.y, minValue, maxValue);
 
             _myTransform.position = _camera.ViewportToWorldPoint(viewportPoint);
-        }
+        }*/
     }
 }
