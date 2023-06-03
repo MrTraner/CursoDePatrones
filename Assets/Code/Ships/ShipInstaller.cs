@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Input;
 
 namespace Ships
 {
@@ -9,6 +10,7 @@ namespace Ships
         [SerializeField] private bool _useAI;
         [SerializeField] private bool _useJoystick;
         [SerializeField] private Joystick _joystick;
+        [SerializeField] private JoyButton _joyButton;
         [SerializeField] private Ship _ship;
 
         private void Awake()
@@ -22,7 +24,7 @@ namespace Ships
                 return new AIInputAdapter(_ship);
 
             if (_useJoystick)
-                return new JoystickInputAdapter(_joystick);
+                return new JoystickInputAdapter(_joystick, _joyButton);
             
             Destroy(_joystick.gameObject);
             return new UnityInputAdapter();
