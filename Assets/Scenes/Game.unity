@@ -675,6 +675,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2852803860710458834, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3999571570407383827, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -692,13 +696,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7928182326929379388, guid: 959d48df05ba5b44b986da44a05411dc, type: 3}
     - target: {fileID: 5960459386037690950, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _weaponController
+      value: 
+      objectReference: {fileID: 8436252041251244217}
+    - target: {fileID: 5960459386037690950, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
       propertyPath: _fireRateInSeconds
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5960459386037690950, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _movementController
+      value: 
+      objectReference: {fileID: 8436252041251244218}
+    - target: {fileID: 5960459386037690950, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
       propertyPath: _projectileSpawnPosition
       value: 
       objectReference: {fileID: 899785977}
+    - target: {fileID: 7756219135700296414, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 7928182326929379388, guid: 959d48df05ba5b44b986da44a05411dc, type: 3}
+    - target: {fileID: 7756219135700296414, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _fireRateInSeconds
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756219135700296414, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _projectileSpawnPosition
+      value: 
+      objectReference: {fileID: 899785977}
+    - target: {fileID: 7756219135700296414, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _projectilePrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756219135700296414, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _projectilePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7928182326929379388, guid: 959d48df05ba5b44b986da44a05411dc, type: 3}
+    - target: {fileID: 7756219135700296414, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+      propertyPath: _projectilePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7928182326929379388, guid: 12995435273f3eb4cb5f1a9a4b2e27c4, type: 3}
     - target: {fileID: 8065432923614896705, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -745,3 +781,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+--- !u!114 &8436252041251244217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7756219135700296414, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+  m_PrefabInstance: {fileID: 8436252041251244216}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe04cc1cb1fddb4da7eeabc5523fcf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8436252041251244218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2852803860710458834, guid: c6b8afc626166c84c8f0e9b655dff30a, type: 3}
+  m_PrefabInstance: {fileID: 8436252041251244216}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547679683ca448f4ba2744751c4d4992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -7,9 +7,12 @@ namespace Ships.Weapons
     [RequireComponent(typeof(Rigidbody2D))]
     public class Projectile : MonoBehaviour
     {
+        [SerializeField] private string _id;
         [SerializeField] private Rigidbody2D _rigidbody2D;
         [SerializeField] private float _speed;
         [SerializeField] private float _destroyInSeconds;
+
+        public string ID => _id;
 
         private void Start()
         {
